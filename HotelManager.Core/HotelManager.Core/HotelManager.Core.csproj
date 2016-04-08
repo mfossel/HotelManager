@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d4ec1cd6-17a6-4225-ac4b-98e69afa443b</ProjectGuid>
+    <ProjectGuid>{D4EC1CD6-17A6-4225-AC4B-98E69AFA443B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HotelManager.Core</RootNamespace>
@@ -30,24 +30,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\Hotel.cs" />
+    <Compile Include="Domain\Reservation.cs" />
+    <Compile Include="Domain\Room.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Workorder.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\HotelModel.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\ReservationModel.cs" />
+    <Compile Include="Models\RoomModel.cs" />
+    <Compile Include="Models\WorkorderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infranstructure\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +66,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>

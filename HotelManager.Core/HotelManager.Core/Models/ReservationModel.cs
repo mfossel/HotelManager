@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManager.Core.Domain
+namespace HotelManager.Core.Models
 {
-    class Reservation
+    class ReservationModel
     {
         public int Id { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal CostPerNight { get; set; }
         public decimal TotalCost { get; set; } //Calculate from Checkin/Checkout date???
-        public Customer Customer { get; set; }
-        public Room Room { get; set; }
+        public CustomerModel Customer { get; set; }
+        public RoomModel Room { get; set; }
+
     }
 }

@@ -1,27 +1,18 @@
-﻿using System;
+﻿using HotelManager.Core.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManager.Core.Domain
+namespace HotelManager.Core.Models
 {
-    public enum Priorities
-    {
-        Emergency = 5,
-        High = 4,
-        Medium = 3,
-        Low = 2,
-        Routine = 1
-    }
-
-    class Workorder
+    class WorkorderModel
     {
         public int RoomNumber { get; set; }
         public Priorities Priority { get; set; }
         public DateTime Date { get; set; }
         public Boolean Closed { get; set; }
-
 
     }
 }

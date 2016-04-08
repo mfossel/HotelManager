@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManager.Core.Domain
+namespace HotelManager.Core.Models
 {
-    public class Customer
+    public class CustomerModel
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -14,6 +14,5 @@ namespace HotelManager.Core.Domain
         public string EmailAddress { get; set; }
         public string TelephoneNumber { get; set; }
 
-  
     }
 }

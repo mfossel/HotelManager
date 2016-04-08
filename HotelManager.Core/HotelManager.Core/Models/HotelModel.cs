@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelManager.Core.Domain
+namespace HotelManager.Core.Models
 {
-    class Hotel
+    class HotelModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,5 @@ namespace HotelManager.Core.Domain
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-
-        //TODO add number of rooms and other properties to Hotel info, make dashboard for hotel
     }
 }
