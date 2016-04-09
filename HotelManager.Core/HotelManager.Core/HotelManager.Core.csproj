@@ -30,7 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +51,10 @@
     <Compile Include="Domain\Room.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\Workorder.cs" />
+    <Compile Include="Infranstructure\Disposable.cs" />
+    <Compile Include="Infranstructure\IAuthorizationRepository.cs" />
+    <Compile Include="Infranstructure\IRepository.cs" />
+    <Compile Include="Infranstructure\IUnitOfwork.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\HotelModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
@@ -53,10 +62,16 @@
     <Compile Include="Models\RoomModel.cs" />
     <Compile Include="Models\WorkorderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ICustomerRepository.cs" />
+    <Compile Include="Repository\IHotelRepository.cs" />
+    <Compile Include="Repository\IReservationRepository.cs" />
+    <Compile Include="Repository\IRoomRepository.cs" />
+    <Compile Include="Repository\IUserRepository.cs" />
+    <Compile Include="Repository\IWorkorderRepository.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Infranstructure\" />
-    <Folder Include="Repository\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

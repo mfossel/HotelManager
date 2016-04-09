@@ -15,7 +15,7 @@ namespace HotelManager.Core.Domain
         Routine = 1
     }
 
-    class Workorder
+    public class Workorder
     {
         public int RoomNumber { get; set; }
         public Priorities Priority { get; set; }

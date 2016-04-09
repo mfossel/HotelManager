@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Core.Domain
 {
-    class Room
+    public class Room
     {
         public int RoomNumber { get; set; }
         public int NumberOfBeds { get; set; }
