@@ -16,7 +16,6 @@ namespace HotelManager.Data.Infrastructure
 
         //SQL Tables
         public IDbSet<Customer> Customers { get; set; }
-        public IDbSet<Hotel> Hotels { get; set; }
         public IDbSet<Reservation> Reservations { get; set; }
         public IDbSet<Room> Rooms { get; set; }
         public IDbSet<User> Users { get; set; }
@@ -25,45 +24,53 @@ namespace HotelManager.Data.Infrastructure
         //Model Relationships
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Response
 
-            //Submission
-            modelBuilder.Entity<Submission>()
-                        .HasMany(s => s.Responses)
-                        .WithRequired(r => r.Submission)
-                        .HasForeignKey(r => r.SubmissionId)
-                        .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Room>()
+              .HasMany(r => r.Reservations)
+              .WithRequired(res => res.Room)
+              .HasForeignKey(res => res.RoomId);
 
-            //Topic
-            modelBuilder.Entity<Topic>()
-                        .HasMany(s => s.Submissions)
-                        .WithRequired(s => s.Topic)
-                        .HasForeignKey(s => s.TopicId);
+            modelBuilder.Entity<Property>()
+                .HasMany(p => p.WorkOrders)
+                .WithRequired(wo => wo.Property)
+                .HasForeignKey(wo => wo.PropertyId);
 
-            //WingmanUser
-            modelBuilder.Entity<WingmanUser>()
-                        .HasMany(wu => wu.Responses)
-                        .WithRequired(r => r.User)
-                        .HasForeignKey(r => r.UserId);
+            modelBuilder.Entity<Tenant>()
+                .HasMany(t => t.Leases)
+                .WithRequired(l => l.Tenant)
+                .HasForeignKey(l => l.TenantId);
 
-            modelBuilder.Entity<WingmanUser>()
-                        .HasMany(wu => wu.Submissions)
-                        .WithRequired(s => s.User)
-                        .HasForeignKey(s => s.UserId)
-                        .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Tenant>()
+                .HasMany(t => t.WorkOrders)
+                .WithOptional(wo => wo.Tenant)
+                .HasForeignKey(wo => wo.TenantId);
 
-            // Specify Relationships
-            modelBuilder.Entity<WingmanUser>()
-                        .HasMany(u => u.Roles)
-                        .WithRequired(ur => ur.User)
-                        .HasForeignKey(ur => ur.UserId);
 
-            modelBuilder.Entity<Role>()
-                        .HasMany(r => r.Users)
-                        .WithRequired(ur => ur.Role)
-                        .HasForeignKey(ur => ur.RoleId);
 
-            modelBuilder.Entity<UserRole>().HasKey(ur => new { ur.UserId, ur.RoleId });
+            modelBuilder.Entity<PropertyManagerUser>()
+                .HasMany(u => u.Properties)
+                .WithRequired(p => p.User)
+                .HasForeignKey(p => p.UserId);
+
+
+            modelBuilder.Entity<PropertyManagerUser>()
+                .HasMany(u => u.Tenants)
+                .WithRequired(t => t.User)
+                .HasForeignKey(t => t.UserId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PropertyManagerUser>()
+                .HasMany(u => u.Leases)
+                .WithRequired(l => l.User)
+                .HasForeignKey(l => l.UserId)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PropertyManagerUser>()
+                .HasMany(u => u.WorkOrders)
+                .WithRequired(wo => wo.User)
+                .HasForeignKey(wo => wo.UserId)
+                .WillCascadeOnDelete(false);
+
 
             base.OnModelCreating(modelBuilder);
         }

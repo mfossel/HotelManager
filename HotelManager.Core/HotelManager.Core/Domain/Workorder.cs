@@ -17,11 +17,12 @@ namespace HotelManager.Core.Domain
 
     public class Workorder
     {
-        public int RoomNumber { get; set; }
+        public int RoomId{ get; set; }
         public Priorities Priority { get; set; }
         public DateTime Date { get; set; }
         public Boolean Closed { get; set; }
 
+        public virtual Room Room { get; set; }
 
     }
 }

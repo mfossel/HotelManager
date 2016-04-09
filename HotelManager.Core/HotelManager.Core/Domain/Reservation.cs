@@ -8,12 +8,15 @@ namespace HotelManager.Core.Domain
 {
     public class Reservation
     {
-        public int Id { get; set; }
+        public int ReservationId { get; set; }
+        public int RoomId { get; set; }
+        public int CustomerId { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal CostPerNight { get; set; }
         public decimal TotalCost { get; set; } //Calculate from Checkin/Checkout date???
-        public Customer Customer { get; set; }
-        public Room Room { get; set; }
+
+        public virtual Customer Customer { get; set; }
+        public virtual Room Room { get; set; }
     }
 }
