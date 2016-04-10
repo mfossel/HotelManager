@@ -1,5 +1,6 @@
 ﻿using HotelManager.Core.Domain;
 using HotelManager.Core.Infranstructure;
+using HotelManager.Core.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace HotelManager.Data.Infrastructure
         private readonly UserManager<User> _userManager;
 
         private HotelManagerDataContext db;
-        protected HotelManagerContext Db
+        protected HotelManagerDataContext Db
         {
             get
             {
@@ -36,7 +37,7 @@ namespace HotelManager.Data.Infrastructure
             var user = new User
             {
                 UserName = model.Username,
-                Email = model.EmailAddress,
+                HotelName = model.HotelName
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

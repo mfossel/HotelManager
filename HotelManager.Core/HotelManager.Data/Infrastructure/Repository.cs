@@ -14,7 +14,7 @@ namespace HotelManager.Data.Infrastructure
         protected IDatabaseFactory DatabaseFactory { get; set; }
 
         private HotelManagerDataContext _dataContext;
-        protected HotelManagerContext DataContext
+        protected HotelManagerDataContext DataContext
         {
             get
             {

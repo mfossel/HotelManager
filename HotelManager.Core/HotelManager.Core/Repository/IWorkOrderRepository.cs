@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Core.Repository
 {
-    public interface IReWorkorderRepository : IRepository<Workorder>
+    public interface IWorkorderRepository : IRepository<Workorder>
     {
     }
 }

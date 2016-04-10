@@ -11,11 +11,15 @@ namespace HotelManager.Core.Domain
     {
         public string Id { get; set; }
         public string UserName { get; set; }
-        public string Email { get; set; }
+        public string HotelName { get; set; }
 
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 
-        
+        public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Room> Rooms { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<Workorder> Workorders { get; set; }
+
     }
 }

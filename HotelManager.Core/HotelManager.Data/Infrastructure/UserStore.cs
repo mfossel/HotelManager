@@ -18,7 +18,7 @@ namespace HotelManager.Data.Infrastructure
     {
         private readonly IDatabaseFactory _databaseFactory;
         private HotelManagerDataContext _dataContext;
-        protected HotelManagerContext DataContext
+        protected HotelManagerDataContext DataContext
         {
             get
             {

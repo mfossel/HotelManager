@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Data.Infrastructure
 {
-    public class WingmanDataContext : DbContext
+    public class HotelManagerDataContext : DbContext
     {
-        public WingmanDataContext() : base("HotelManager")
+        public HotelManagerDataContext() : base("HotelManager")
         {
         }
 
@@ -30,43 +30,39 @@ namespace HotelManager.Data.Infrastructure
               .WithRequired(res => res.Room)
               .HasForeignKey(res => res.RoomId);
 
-            modelBuilder.Entity<Property>()
-                .HasMany(p => p.WorkOrders)
-                .WithRequired(wo => wo.Property)
-                .HasForeignKey(wo => wo.PropertyId);
+            modelBuilder.Entity<Room>()
+                .HasMany(r => r.Workorders)
+                .WithRequired(wo => wo.Room)
+                .HasForeignKey(wo => wo.RoomId);
 
-            modelBuilder.Entity<Tenant>()
-                .HasMany(t => t.Leases)
-                .WithRequired(l => l.Tenant)
-                .HasForeignKey(l => l.TenantId);
-
-            modelBuilder.Entity<Tenant>()
-                .HasMany(t => t.WorkOrders)
-                .WithOptional(wo => wo.Tenant)
-                .HasForeignKey(wo => wo.TenantId);
+            modelBuilder.Entity<Customer>()
+                .HasMany(c => c.Reservations)
+                .WithRequired(r => r.Customer)
+                .HasForeignKey(r => r.CustomerId);
 
 
 
-            modelBuilder.Entity<PropertyManagerUser>()
-                .HasMany(u => u.Properties)
-                .WithRequired(p => p.User)
-                .HasForeignKey(p => p.UserId);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Rooms)
+                .WithRequired(r => r.User)
+                .HasForeignKey(r => r.UserId);
 
 
-            modelBuilder.Entity<PropertyManagerUser>()
-                .HasMany(u => u.Tenants)
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Customers)
                 .WithRequired(t => t.User)
                 .HasForeignKey(t => t.UserId)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<PropertyManagerUser>()
-                .HasMany(u => u.Leases)
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Reservations)
                 .WithRequired(l => l.User)
                 .HasForeignKey(l => l.UserId)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<PropertyManagerUser>()
-                .HasMany(u => u.WorkOrders)
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Workorders)
                 .WithRequired(wo => wo.User)
                 .HasForeignKey(wo => wo.UserId)
                 .WillCascadeOnDelete(false);
