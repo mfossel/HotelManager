@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace HotelManager.Core.Domain
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string TelephoneNumber { get; set; }
+
+        [NotMapped]
+        public string FullName => $"{FirstName} + {LastName}";
 
         public virtual User User { get; set; }
 
