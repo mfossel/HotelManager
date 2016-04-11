@@ -9,7 +9,7 @@ namespace HotelManager.Core.Domain
     public class Room
     {
         public int RoomId { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int RoomNumber { get; set; }
         public int NumberOfBeds { get; set; }
 

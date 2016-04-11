@@ -17,8 +17,9 @@ namespace HotelManager.Core.Domain
 
     public class Workorder
     {
+        public int WorkorderId { get; set; }
         public int RoomId{ get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public Priorities Priority { get; set; }
         public DateTime Date { get; set; }
         public Boolean Closed { get; set; }
