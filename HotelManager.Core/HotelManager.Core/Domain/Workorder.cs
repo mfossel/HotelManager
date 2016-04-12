@@ -1,4 +1,5 @@
-﻿                                   using System;
+﻿using HotelManager.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,22 @@ namespace HotelManager.Core.Domain
 
         public virtual User User { get; set; }
         public virtual Room Room { get; set; }
+
+        public Workorder() { }
+        public Workorder(WorkorderModel model)
+        {
+            this.Update(model);
+        }
+
+        public void Update (WorkorderModel model)
+        {
+            WorkorderId = model.WorkorderId;
+            RoomId = model.RoomId;
+            UserId = model.UserId;
+            Priority = model.Priority;
+            Date = model.Date;
+            Closed = model.Closed;
+        }
 
     }
 }

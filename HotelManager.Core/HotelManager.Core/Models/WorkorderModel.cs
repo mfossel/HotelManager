@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Core.Models
 {
-    class WorkorderModel
+    public class WorkorderModel
     {
-        public int RoomNumber { get; set; }
+        public int WorkorderId { get; set; }
+        public int RoomId { get; set; }
+        public string UserId { get; set; }
         public Priorities Priority { get; set; }
         public DateTime Date { get; set; }
         public Boolean Closed { get; set; }

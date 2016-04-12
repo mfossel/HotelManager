@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelManager.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,22 @@ namespace HotelManager.Core.Domain
 
         public virtual ICollection<Reservation> Reservations { get; set; }
         public virtual ICollection<Workorder> Workorders { get; set; }
+
+
+        public Room() { }
+
+        public Room(RoomModel model)
+        {
+            this.Update(model);
+        }
+
+        public void Update(RoomModel model)
+        {
+            RoomId = model.RoomId;
+            UserId = model.UserId;
+            RoomNumber = model.RoomNumber;
+            NumberOfBeds = model.NumberOfBeds;
+        }
 
     }
 }

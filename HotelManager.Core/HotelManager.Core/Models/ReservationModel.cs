@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Core.Models
 {
-    class ReservationModel
+    public class ReservationModel
     {
-        public int Id { get; set; }
+        public int ReservationId { get; set; }
+        public int RoomId { get; set; }
+        public int CustomerId { get; set; }
+        public string UserId { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal CostPerNight { get; set; }

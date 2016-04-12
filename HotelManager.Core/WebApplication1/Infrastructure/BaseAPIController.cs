@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 
-namespace WebApplication1.Infrastructure
+namespace HotelManager.API.Infrastructure
 {
     public class BaseApiController : ApiController
     {
