@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Infrastructure\BaseAPIController.cs" />
+    <Compile Include="Infrastructure\HotelManagerAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
