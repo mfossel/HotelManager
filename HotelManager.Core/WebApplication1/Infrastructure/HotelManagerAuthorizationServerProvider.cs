@@ -9,13 +9,13 @@ using System.Web;
 
 namespace HotelManager.API.Infrastructure
 {
-    public class PizzaManAuthorizationServerProvider : OAuthAuthorizationServerProvider
+    public class HotelManagerAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
         private Func<IAuthorizationRepository> _authRepositoryFactory;
 
         private IAuthorizationRepository _authRepository => _authRepositoryFactory.Invoke();
 
-        public PizzaManAuthorizationServerProvider(Func<IAuthorizationRepository> authRepositoryFactory)
+        public HotelManagerAuthorizationServerProvider(Func<IAuthorizationRepository> authRepositoryFactory)
         {
             _authRepositoryFactory = authRepositoryFactory;
         }

@@ -16,7 +16,7 @@ namespace HotelManager.Core.Domain
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
         public decimal CostPerNight { get; set; }
-        public decimal TotalCost { get; set; } //Calculate from Checkin/Checkout date???
+        public decimal TotalCost { get;} //Calculate from Checkin/Checkout date???
 
         public virtual User User { get; set; }
 

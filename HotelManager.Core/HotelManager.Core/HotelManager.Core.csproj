@@ -55,7 +55,6 @@
     <Compile Include="Infranstructure\IRepository.cs" />
     <Compile Include="Infranstructure\IUnitOfwork.cs" />
     <Compile Include="Models\CustomerModel.cs" />
-    <Compile Include="Models\HotelModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\ReservationModel.cs" />
     <Compile Include="Models\RoomModel.cs" />
