@@ -14,6 +14,7 @@ using System.Web.Http.Description;
 
 namespace HotelManager.API.Controllers
 {
+    [Authorize]
     public class CustomersController : BaseApiController
     {
 
