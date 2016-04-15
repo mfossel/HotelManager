@@ -1,13 +1,9 @@
-﻿using AutoMapper;
-using HotelManager.Core.Domain;
-using HotelManager.Core.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Http;
 
-namespace HotelManager.API.App_Start
+namespace WebApplication1
 {
     public static class WebApiConfig
     {
@@ -23,17 +19,6 @@ namespace HotelManager.API.App_Start
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
-            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
-
-            CreateMaps();
-        }
-        public static void CreateMaps()
-        {
-            Mapper.CreateMap<Customer, CustomerModel>();
-            Mapper.CreateMap<Reservation, ReservationModel>();
-            Mapper.CreateMap<Room, RoomModel>();
-            Mapper.CreateMap<Workorder, WorkorderModel>();
         }
     }
 }
