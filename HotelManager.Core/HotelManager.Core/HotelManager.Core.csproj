@@ -58,6 +58,7 @@
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\ReservationModel.cs" />
     <Compile Include="Models\RoomModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\WorkorderModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ICustomerRepository.cs" />

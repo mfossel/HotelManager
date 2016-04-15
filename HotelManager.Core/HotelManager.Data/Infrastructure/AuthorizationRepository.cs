@@ -37,7 +37,6 @@ namespace HotelManager.Data.Infrastructure
             var user = new User
             {
                 UserName = model.Username,
-                HotelName = model.HotelName
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

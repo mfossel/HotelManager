@@ -18,6 +18,7 @@ using HotelManager.Core.Models;
 
 namespace HotelManager.API.Controllers
 {
+    [Authorize]
     public class RoomsController : BaseApiController
     {
         private readonly IRoomRepository _roomRepository;

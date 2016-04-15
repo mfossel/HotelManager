@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.Core", "HotelM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.Data", "HotelManager.Data\HotelManager.Data.csproj", "{F5AA1300-B24A-407A-B968-0478DCB7828E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.API", "HotelManager.API\HotelManager.API.csproj", "{5D222D12-099C-4345-B0A8-8DE021A04216}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.API2", "HotelManager.API\HotelManager.API2.csproj", "{5D222D12-099C-4345-B0A8-8DE021A04216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
