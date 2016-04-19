@@ -67,6 +67,7 @@ namespace HotelManager.Api
                 container.Register<IRoomRepository, RoomRepository>();
                 container.Register<IWorkorderRepository, WorkorderRepository>();
                 container.Register<IUserRepository, UserRepository>();
+
                 container.Register<IUserStore<User, string>, UserStore>(Lifestyle.Scoped);
                 container.Register<IAuthorizationRepository, AuthorizationRepository>(Lifestyle.Scoped);
 

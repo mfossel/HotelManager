@@ -14,7 +14,6 @@ namespace HotelManager.Data.Infrastructure
                            IUserStore<User>,
                            IUserPasswordStore<User>,
                            IUserSecurityStampStore<User>
-                           //IUserRoleStore<User>
     {
         private readonly IDatabaseFactory _databaseFactory;
         private HotelManagerDataContext _dataContext;
