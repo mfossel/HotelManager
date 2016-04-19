@@ -196,10 +196,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\BaseAPIController.cs" />
+    <Compile Include="Infrastructure\HotelManagerAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
+    <ProjectReference Include="..\HotelManager.Core\HotelManager.Core.csproj">
+      <Project>{d4ec1cd6-17a6-4225-ac4b-98e69afa443b}</Project>
+      <Name>HotelManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HotelManager.Data\HotelManager.Data.csproj">
+      <Project>{f5aa1300-b24a-407a-b968-0478dcb7828e}</Project>
+      <Name>HotelManager.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
