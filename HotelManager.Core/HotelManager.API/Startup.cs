@@ -60,15 +60,15 @@ namespace HotelManager.Api
                 container.Options.DefaultScopedLifestyle = new ExecutionContextScopeLifestyle();
 
                 container.Register<IDatabaseFactory, DatabaseFactory>(Lifestyle.Scoped);
+                container.Register<IUserStore<User, string>, UserStore>(Lifestyle.Scoped);
                 container.Register<IUnitOfWork, UnitOfWork>();
 
                 container.Register<ICustomerRepository, CustomerRepository>();
                 container.Register<IReservationRepository, ReservationRepository>();
                 container.Register<IRoomRepository, RoomRepository>();
                 container.Register<IWorkorderRepository, WorkorderRepository>();
-                container.Register<IUserRepository, UserRepository>();
 
-                container.Register<IUserStore<User, string>, UserStore>(Lifestyle.Scoped);
+                container.Register<IUserRepository, UserRepository>();     
                 container.Register<IAuthorizationRepository, AuthorizationRepository>(Lifestyle.Scoped);
 
                 // more code to facilitate a scoped lifestyle
