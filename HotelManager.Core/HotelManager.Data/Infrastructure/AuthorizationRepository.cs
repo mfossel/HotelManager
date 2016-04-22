@@ -10,33 +10,28 @@ using System.Threading.Tasks;
 
 namespace HotelManager.Data.Infrastructure
 {
-    public class AuthorizationRepository : IDisposable, IAuthorizationRepository
+    public class AuthorizationRepository : IAuthorizationRepository, IDisposable
     {
-        private readonly IUserStore<User> _userStore;
+        private readonly IUserStore<User, string> _userStore;
         private readonly IDatabaseFactory _databaseFactory;
-        private readonly UserManager<User> _userManager;
+        private readonly UserManager<User, string> _userManager;
 
         private HotelManagerDataContext db;
-        protected HotelManagerDataContext Db
-        {
-            get
-            {
-                return db ?? (db = _databaseFactory.GetDataContext());
-            }
-        }
+        protected HotelManagerDataContext Db => db ?? (db = _databaseFactory.GetDataContext());
 
-        public AuthorizationRepository(IDatabaseFactory databaseFactory, IUserStore<User> userStore)
+        public AuthorizationRepository(IDatabaseFactory databaseFactory, IUserStore<User, string> userStore)
         {
             _userStore = userStore;
             _databaseFactory = databaseFactory;
-            _userManager = new UserManager<User>(userStore);
+            _userManager = new UserManager<User, string>(userStore);
         }
 
         public async Task<IdentityResult> RegisterUser(RegistrationModel model)
         {
             var user = new User
             {
-                UserName = model.Username,
+                UserName = model.Username
+
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

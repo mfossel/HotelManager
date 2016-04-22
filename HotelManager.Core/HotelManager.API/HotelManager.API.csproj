@@ -207,7 +207,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HotelManager.Core\HotelManager.Core.csproj">
       <Project>{d4ec1cd6-17a6-4225-ac4b-98e69afa443b}</Project>
