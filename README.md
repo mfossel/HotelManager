@@ -1,4 +1,3 @@
-# HotelManager
 ###Hotel Management Web App
 
 ASP.NET WebApi
