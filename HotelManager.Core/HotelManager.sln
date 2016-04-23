@@ -9,6 +9,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.Data", "HotelM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManager.API", "HotelManager.API\HotelManager.API.csproj", "{4D94855A-F74B-4564-9E97-5EFDEAAAB871}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HotelManager.Web", "HotelManager.Web\", "{CC7EB2E0-1064-4C9C-8888-7F6D5C9202E5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52187"
+		Debug.AspNetCompiler.PhysicalPath = "HotelManager.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52187\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52187"
+		Release.AspNetCompiler.PhysicalPath = "HotelManager.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52187\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52187"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +48,10 @@ Global
 		{4D94855A-F74B-4564-9E97-5EFDEAAAB871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D94855A-F74B-4564-9E97-5EFDEAAAB871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D94855A-F74B-4564-9E97-5EFDEAAAB871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7EB2E0-1064-4C9C-8888-7F6D5C9202E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7EB2E0-1064-4C9C-8888-7F6D5C9202E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7EB2E0-1064-4C9C-8888-7F6D5C9202E5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7EB2E0-1064-4C9C-8888-7F6D5C9202E5}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
