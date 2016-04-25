@@ -1,0 +1,23 @@
+﻿body {
+    background-image: url('../img/photo-1444201983204-c43cbd584d93.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background-color:black;
+    opacity:.9;
+}
+
+.control-label {
+    color:white;
+}
+
+h3 {
+    color:white;
+}

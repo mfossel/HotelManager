@@ -8,13 +8,13 @@
 angular.module('app').value('apiUrl', 'http://localhost:50849/api');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
-    $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('login');
 
     $httpProvider.interceptors.push('AuthenticationInterceptor');
 
     $stateProvider
         .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: "HomeController" })
-        .state('register', { url: '/register', templateUrl: '/templates/register/register.html', controller: "RegisterController" })
+        .state('login', { url: '/login', templateUrl: '/templates/accounts/login.html', controller: "LoginController" })
 
       
 });
