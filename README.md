@@ -1,2 +1,5 @@
-# HotelManager
-Hotel Management Web App
+###Hotel Management Web App
+
+ASP.NET WebApi
+
+Bootstrap AnuglarJS
