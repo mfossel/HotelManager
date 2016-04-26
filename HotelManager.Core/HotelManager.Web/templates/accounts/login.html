@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label">Username</label>
                 <div class="col-md-5">
-                    <input id="usernameinput" name="usernameinput" placeholder="Enter username..." class="form-control input-md" required="" type="text">
+                    <input id="usernameinput" name="usernameinput" placeholder="Enter username..." class="form-control input-md" required="" type="text" ng-model="loginData.username">
                 </div>
             </div>
 
@@ -22,13 +22,17 @@
             <div class="form-group">
                 <label class="col-md-4 control-label">Password</label>
                 <div class="col-md-5">
-                    <input id="passwordinput" name="passwordinput" placeholder="Enter password..." class="form-control input-md" required="" type="password">
+                    <input id="passwordinput" name="passwordinput" placeholder="Enter password..." class="form-control input-md" required="" type="password" ng-model="loginData.password">
 
                 </div>
             </div>
 
         </fieldset>
     </form>
+
+    <div class="text-center" style="margin-top:1em;">
+        <button class="btn btn-success btn-lg" ng-click="login()">Login  </button>
+    </div>
 
     <div class="text-center" style="margin-top:1em;">
         <a href="#/register" class="btn btn-success btn-lg" role="button">Sign Up</a>

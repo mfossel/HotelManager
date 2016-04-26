@@ -10,5 +10,6 @@ namespace HotelManager.Core.Models
     {
         public string Id { get; set; }
         public string UserName { get; set; }
+        public string HotelName { get; set; }
     }
 }

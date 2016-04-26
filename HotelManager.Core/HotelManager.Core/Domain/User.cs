@@ -11,7 +11,7 @@ namespace HotelManager.Core.Domain
     {
         public string Id { get; set; }
         public string UserName { get; set; }
-
+        public string HotelName { get; set; }
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 
