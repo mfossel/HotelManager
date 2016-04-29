@@ -205,6 +205,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\WorkordersController.cs" />
     <Compile Include="Infrastructure\BaseAPIController.cs" />
     <Compile Include="Infrastructure\HotelManagerAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
