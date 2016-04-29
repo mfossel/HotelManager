@@ -203,6 +203,7 @@
     <Compile Include="App_start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Infrastructure\BaseAPIController.cs" />
     <Compile Include="Infrastructure\HotelManagerAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
