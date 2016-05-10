@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using HotelManager.Core.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,17 @@ namespace HotelManager.Core.Domain
         public virtual ICollection<Room> Rooms { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Workorder> Workorders { get; set; }
+
+        public User(UserModel model) : this()
+        {
+            this.Update(model);
+        }
+
+        public void Update(UserModel model)
+        {
+            Id = model.Id;
+            UserName = model.UserName;
+        }
 
     }
 }
