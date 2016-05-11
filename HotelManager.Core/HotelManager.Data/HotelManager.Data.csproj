@@ -60,17 +60,9 @@
     <Compile Include="Infrastructure\Repository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Infrastructure\UserStore.cs" />
-    <Compile Include="Migrations\201604122241119_initial.cs" />
-    <Compile Include="Migrations\201604122241119_initial.Designer.cs">
-      <DependentUpon>201604122241119_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604260202498_userupdate.cs" />
-    <Compile Include="Migrations\201604260202498_userupdate.Designer.cs">
-      <DependentUpon>201604260202498_userupdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605070119045_update.cs" />
-    <Compile Include="Migrations\201605070119045_update.Designer.cs">
-      <DependentUpon>201605070119045_update.cs</DependentUpon>
+    <Compile Include="Migrations\201605110345194_intial.cs" />
+    <Compile Include="Migrations\201605110345194_intial.Designer.cs">
+      <DependentUpon>201605110345194_intial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,14 +83,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604122241119_initial.resx">
-      <DependentUpon>201604122241119_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604260202498_userupdate.resx">
-      <DependentUpon>201604260202498_userupdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605070119045_update.resx">
-      <DependentUpon>201605070119045_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605110345194_intial.resx">
+      <DependentUpon>201605110345194_intial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

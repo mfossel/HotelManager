@@ -21,16 +21,5 @@ namespace HotelManager.Core.Domain
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Workorder> Workorders { get; set; }
 
-        public User(UserModel model) : this()
-        {
-            this.Update(model);
-        }
-
-        public void Update(UserModel model)
-        {
-            Id = model.Id;
-            UserName = model.UserName;
-        }
-
     }
 }
