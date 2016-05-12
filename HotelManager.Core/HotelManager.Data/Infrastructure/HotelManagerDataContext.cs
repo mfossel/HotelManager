@@ -12,6 +12,7 @@ namespace HotelManager.Data.Infrastructure
     {
         public HotelManagerDataContext() : base("HotelManager")
         {
+            var ensureDllIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
         //SQL Tables
