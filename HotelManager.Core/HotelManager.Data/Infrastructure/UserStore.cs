@@ -37,6 +37,7 @@ namespace HotelManager.Data.Infrastructure
                 throw new ArgumentNullException(nameof(user));
 
             return Task.Factory.StartNew(() => {
+                user.Id = Guid.NewGuid().ToString();
                 DataContext.Users.Add(user);
                 DataContext.SaveChanges();
             });
