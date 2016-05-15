@@ -5,3 +5,14 @@
     background-position: center center;
     background-attachment: fixed;
 }
+
+#navbrand {
+    font-size:x-large;
+    margin-top:1em;
+    color:wheat;
+    margin-left:1em;
+}
+
+.navbar {
+    height: 5em;
+}
