@@ -135,5 +135,20 @@ namespace HotelManager.API.Controllers
             return _reservationRepository.Count();
         }
 
+        //LINQ Queries
+
+        // GET: api/Reservations/recent
+        [Route("api/reviews/recent")]
+        public IHttpActionResult GetLatestReview()
+        {
+            IEnumerable<Reservation> recents = _reservationRepository.GetAll().OrderBy(r => r.ReservationId).Take(5);
+
+            return Ok(Mapper.Map<IEnumerable<ReservationModel>>(recents));
+        }
+
+
+
+
+
     }
 }
