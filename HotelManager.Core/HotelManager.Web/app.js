@@ -17,6 +17,8 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
         .state('login', { url: '/login', templateUrl: '/templates/accounts/login.html', controller: "LoginController" })
         .state('register', { url: '/register', templateUrl: '/templates/accounts/register.html', controller: "RegisterController" })
 
+        .state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html', controller: "DashboardController" })
+
       
 });
 
