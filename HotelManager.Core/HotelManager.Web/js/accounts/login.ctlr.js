@@ -4,7 +4,7 @@
     $scope.login = function () {
         AuthenticationService.login($scope.loginData).then(
             function (response) {
-                location.replace('/#/dashboard');
+                location.replace('/#/home/dashboard');
 
             },
             function (err) {
