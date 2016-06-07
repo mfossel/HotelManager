@@ -11,12 +11,14 @@
     margin-top:1em;
     color:wheat;
     margin-left:1em;
+    margin-right:3em;
 }
 
 .navbar {
     height: 5em;
 }
 
-#navbartext {
-    margin-top:1em;
+.navbartext {
+    margin-top:.8em;
+    font-size:larger;
 }
