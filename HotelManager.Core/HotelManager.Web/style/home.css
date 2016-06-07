@@ -16,3 +16,7 @@
 .navbar {
     height: 5em;
 }
+
+#navbartext {
+    margin-top:1em;
+}
