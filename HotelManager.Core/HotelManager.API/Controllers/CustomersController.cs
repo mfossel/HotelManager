@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using HotelManager.Core.Domain;
-using HotelManager.Data.Infrastructure;
 using HotelManager.Core.Repository;
 using HotelManager.Core.Infranstructure;
 using AutoMapper;
 using HotelManager.Core.Models;
-using System.Web.Http.ModelBinding;
 using HotelManager.API.Infrastructure;
 
 namespace HotelManager.API.Controllers
