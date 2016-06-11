@@ -6,10 +6,12 @@
             function (response) {
                 location.replace('/#/home/dashboard');
 
-            },
+            },  
+            
             function (err) {
                 toastr.error("Invalid login.");
             }
+            
         );
     };
 });
