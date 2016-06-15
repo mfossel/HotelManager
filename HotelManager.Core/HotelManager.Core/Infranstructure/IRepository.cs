@@ -26,5 +26,6 @@ namespace HotelManager.Core.Infranstructure
 
         // DELETE
         void Delete(TEntity entity);
+
     }
 }
