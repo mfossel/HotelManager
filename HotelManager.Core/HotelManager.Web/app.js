@@ -18,8 +18,9 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
         .state('register', { url: '/register', templateUrl: '/templates/accounts/register.html', controller: "RegisterController" })
 
         .state('home.dashboard', { url: '/dashboard', parent:'home', templateUrl: '/templates/dashboard/dashboard.html', controller: "DashboardController" })
-
-      
+        
+        .state('home.rooms', { url: '/home/rooms', parent: 'home', templateUrl: '/templates/app/room.html', controller: "RoomController" })
+        .state('home.reservations', { url: '/home/reservations', parent: 'home', templateUrl: '/templates/app/reservation.html', controller: "ReservationController" })
 });
 
 angular.module('app').run(function (AuthenticationService) {
